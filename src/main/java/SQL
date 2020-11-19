@@ -1,0 +1,3 @@
+select customer.name, account.acc_number, SUM(amount) from customer, account
+INNER JOIN fin_transaction on account.id = fin_transaction.account_id
+GROUP by fin_transaction.amount;
